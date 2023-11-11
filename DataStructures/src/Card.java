@@ -27,6 +27,19 @@ public class Card {
         return Card.suits[this.suit];
     }
 
+    public int getRankValue(){
+        return this.rank;
+    }
+
+    public String getColour(){
+        if (this.getSuit().equals("Diamonds") || this.getSuit().equals("Hearts")){
+            return "Red";
+        }else {
+            return "Black";
+        }
+    }
+
+
     public boolean isBiggerThan(Card anotherCard){
         return this.rank > anotherCard.rank;
     }
